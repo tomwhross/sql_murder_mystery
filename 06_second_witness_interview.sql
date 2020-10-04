@@ -9,7 +9,7 @@ WHERE person_id = (
   SELECT id
   FROM person
   WHERE name LIKE 'Annabel%'
-  AND address_street_name = 'Franklin Ave'
+    AND address_street_name = 'Franklin Ave'
 );
 
 /*
