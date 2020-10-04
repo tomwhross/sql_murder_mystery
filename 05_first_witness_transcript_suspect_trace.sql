@@ -18,7 +18,7 @@ AND id IN (
   SELECT person_id
   FROM get_fit_now_member
   WHERE membership_status = 'gold'
-  AND id LIKE '48Z%'
+    AND id LIKE '48Z%'
 );
 
 /*
