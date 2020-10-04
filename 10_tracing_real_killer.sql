@@ -18,7 +18,7 @@ FROM person p
 JOIN drivers_license dl
 	ON p.license_id = dl.id
 JOIN (
-	SELECT person_id, count(event_name) AS attendance_count
+  SELECT person_id, count(event_name) AS attendance_count
 	FROM facebook_event_checkin fe
 	WHERE fe.event_name = 'SQL Symphony Concert'
 	AND fe.date >= '20171201' AND fe.date < '20180101'
