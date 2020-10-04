@@ -21,16 +21,16 @@ JOIN (
   SELECT person_id, count(event_name) AS attendance_count
   FROM facebook_event_checkin fe
   WHERE fe.event_name = 'SQL Symphony Concert'
-  AND fe.date >= '20171201' AND fe.date < '20180101'
+    AND fe.date >= '20171201' AND fe.date < '20180101'
   GROUP BY person_id
   HAVING attendance_count = 3
 ) fe
   ON p.id = fe.person_id
 WHERE dl.hair_color = 'red'
-AND dl.gender = 'female'
-AND dl.car_make = 'Tesla'
-AND dl.car_model = 'Model S'
-AND dl.height >= 65 AND dl.height <= 67;
+  AND dl.gender = 'female'
+  AND dl.car_make = 'Tesla'
+  AND dl.car_model = 'Model S'
+  AND dl.height >= 65 AND dl.height <= 67;
 
 /*
   Returns one record, where person.id=99716
