@@ -21,9 +21,9 @@ JOIN get_fit_now_check_in gfnc
 JOIN drivers_license dl
   ON p.license_id = dl.id
 WHERE dl.plate_number LIKE '%H42W%'
-AND gfnm.membership_status = 'gold'
-AND gfnm.id LIKE '48Z%'
-AND gfnc.check_in_date = '20180109';
+  AND gfnm.membership_status = 'gold'
+  AND gfnm.id LIKE '48Z%'
+  AND gfnc.check_in_date = '20180109';
 
 /*
   Returns one record, where person.id=67318
