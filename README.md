@@ -1,6 +1,10 @@
 # SQL Murder Mystery Solutions
 Solutions to [knight lab's SQL Murder Mystery](https://mystery.knightlab.com/)
 
+
+![SQL Murder Mystery](https://mystery.knightlab.com/174092-clue-illustration.png "SQL Murder Mystery")
+
+
 Please do no use these solutions to complete the challenge yourself. I created this repo to
 * show that I have solved the mystery
 * save my work as I went along
