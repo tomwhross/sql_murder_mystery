@@ -16,16 +16,16 @@
 SELECT p.*
 FROM person p
 JOIN drivers_license dl
-	ON p.license_id = dl.id
+  ON p.license_id = dl.id
 JOIN (
   SELECT person_id, count(event_name) AS attendance_count
-	FROM facebook_event_checkin fe
-	WHERE fe.event_name = 'SQL Symphony Concert'
-	AND fe.date >= '20171201' AND fe.date < '20180101'
-	GROUP BY person_id
-	HAVING attendance_count = 3
+  FROM facebook_event_checkin fe
+  WHERE fe.event_name = 'SQL Symphony Concert'
+  AND fe.date >= '20171201' AND fe.date < '20180101'
+  GROUP BY person_id
+  HAVING attendance_count = 3
 ) fe
-	ON p.id = fe.person_id
+  ON p.id = fe.person_id
 WHERE dl.hair_color = 'red'
 AND dl.gender = 'female'
 AND dl.car_make = 'Tesla'
